@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f7;
+  color: #17231f;
+  line-height: 1.6;
+}
+
+.header {
+  background: #176b5b;
+  color: white;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  margin-right: 6px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    #e4f5ef,
+    #f8fcfa
+  );
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 19px;
+  color: #53635e;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 14px 23px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #176b5b;
+  color: white;
+}
+
+.secondary-btn {
+  background: white;
+  color: #176b5b;
+  border: 2px solid #176b5b;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 65px 6%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.section-text {
+  color: #687570;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.06);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #ccd8d4;
+  border-radius: 9px;
+  padding: 13px;
+  font-size: 15px;
+  background: white;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.post-section {
+  max-width: 750px;
+}
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 17px;
+  margin-bottom: 6px;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.privacy-note {
+  font-size: 13px;
+  color: #64736e;
+  margin-top: 8px;
+}
+
+.results {
+  margin-top: 25px;
+  display: grid;
+  gap: 15px;
+}
+
+.item-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 5px solid #176b5b;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.item-card h3 {
+  margin-bottom: 8px;
+}
+
+.item-card p {
+  color: #596762;
+  margin: 4px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #e4f5ef;
+  color: #176b5b;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.safety {
+  background: #eaf4f1;
+  padding: 60px 6%;
+  text-align: center;
+}
+
+.safety h2 {
+  margin-bottom: 30px;
+}
+
+.safety-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.safety-grid div {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.safety-grid span {
+  font-size: 35px;
+}
+
+.safety-grid h3 {
+  margin: 10px 0;
+}
+
+.safety-grid p {
+  color: #65736e;
+}
+
+footer {
+  background: #123f36;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+footer p {
+  opacity: .8;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #176b5b;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .search-box {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+}
