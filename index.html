@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PataLost Kenya | Lost & Found Platform - IDs, Phones, Documents</title>
+    <meta name="description" content="Kenya's trusted lost and found platform. Recover lost National IDs, passports, phones, documents, and valuables quickly across all 47 counties.">
+    <meta name="keywords" content="lost ID Kenya, lost phone Kenya, found documents Kenya, lost and found Kenya, PataLost">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="PataLost Kenya | Lost & Found Platform">
+    <meta property="og:description" content="Report and find lost items safely across Kenya.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://patalost.co.ke">
+
+    <!-- PWA Manifest & Theme -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1D4ED8">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="app-header">
+        <div class="logo-container" onclick="router('home')">
+            <h1>Pata<span>Lost</span></h1>
+            <span class="badge-ke">🇰🇪 Kenya</span>
+        </div>
+        <nav class="top-nav">
+            <button onclick="router('notifications')" class="icon-btn" aria-label="Notifications">🔔 <span id="notif-badge" class="badge-count" style="display:none;">0</span></button>
+            <button onclick="router('profile')" class="icon-btn" aria-label="Profile">👤</button>
+        </nav>
+    </header>
+
+    <!-- Main Content App Container -->
+    <main id="app-container" class="container">
+        <!-- Dynamically rendered views load here -->
+    </main>
+
+    <!-- Bottom Mobile Navigation Bar -->
+    <nav class="bottom-nav">
+        <button onclick="router('home')" class="nav-item active" data-target="home">🏠<span>Home</span></button>
+        <button onclick="router('search')" class="nav-item" data-target="search">🔍<span>Search</span></button>
+        <button onclick="router('report')" class="nav-item nav-action-btn" data-target="report">➕<span>Report</span></button>
+        <button onclick="router('messages')" class="nav-item" data-target="messages">💬<span>Chats</span></button>
+        <button onclick="router('safety')" class="nav-item" data-target="safety">🛡️<span>Safety</span></button>
+    </nav>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('serviceworker.js');
+        }
+    </script>
+</body>
+</html>
